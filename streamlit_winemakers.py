@@ -15,10 +15,10 @@ st.text('Andrew ID: abhinaas')
 # typical_sugar_val = 30 
 # high_sugar_val = 10
 
-mold_val = st.number_input('Chance of botrytis', step=1, value=10)
-no_sugar_val = st.number_input('Chance of No Sugar', step=1, value=60)
-typical_sugar_val = st.number_input('Chance of Typical Sugar', step=1, value=30)
-high_sugar_val = st.number_input('Chance of High Sugar', step=1, value=10)
+mold_val = st.slider('Chance of botrytis', step=1, value=10)
+no_sugar_val = st.slider('Chance of No Sugar', step=1, value=60)
+typical_sugar_val = st.slider('Chance of Typical Sugar', step=1, value=30)
+high_sugar_val = st.slider('Chance of High Sugar', step=1, value=10)
 
 ds_value = 0.76* ((mold_val/100)*3300000 + 0.9*420000) + 0.25* ((no_sugar_val/100)*960000 + (typical_sugar_val/100)*1410000 + (high_sugar_val/100)*1500000) 
 dns_value = 0.77* ((no_sugar_val/100)*960000 + (typical_sugar_val/100)*1410000 + (high_sugar_val/100)*1500000) + 0.23*((mold_val/100)*3300000 + 0.9*420000)
